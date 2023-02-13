@@ -4,6 +4,7 @@ import { AlbumsComponent } from './components/albums/albums.component';
 import { CommentsComponent } from './components/comments/comments.component';
 import { PhotosComponent } from './components/photos/photos.component';
 import { PostsComponent } from './components/posts/posts.component';
+import { TodosComponent } from './components/todos/todos.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: 'photos',
     component: PhotosComponent,
+  },
+  {
+    path: 'todos',
+    component: TodosComponent,
   },
 ];
 

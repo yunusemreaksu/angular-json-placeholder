@@ -1,0 +1,9 @@
+<button type="button" (click)="handleClick()">Show Completed Todos</button>
+<div class="todo-container" *ngFor="let todo of todos">
+  <ng-container *ngIf="!todo.completed">
+    <p><span>UserID: </span>{{todo.userId}}</p>
+    <p><span>ID: </span>{{todo.id}}</p>
+    <p><span>Title: </span>{{todo.title}}</p>
+    <hr>
+  </ng-container>
+</div>
