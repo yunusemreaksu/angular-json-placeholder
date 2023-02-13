@@ -1,17 +1,17 @@
-import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Post } from '../models/post.model';
+import { Photo } from '../models/photo.model';
 
 @Injectable({
   providedIn: 'root',
 })
-export class PostService {
-  postsUrl = 'https://jsonplaceholder.typicode.com/posts';
-  
+export class PhotoService {
+  photosUrl = 'https://jsonplaceholder.typicode.com/photos';
+
   constructor(private http: HttpClient) {}
 
-  getPosts(): Observable<Post[]> {
+  getPhotos(): Observable<Photo[]> {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
     });
@@ -19,6 +19,7 @@ export class PostService {
     const options = {
       headers,
     };
-    return this.http.get<Post[]>(this.postsUrl, options);
+
+    return this.http.get<Photo[]>(this.photosUrl, options);
   }
 }

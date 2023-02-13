@@ -8,9 +8,10 @@ import { AppbarComponent } from './components/appbar/appbar.component';
 import { PostsComponent } from './components/posts/posts.component';
 import { CommentsComponent } from './components/comments/comments.component';
 import { AlbumsComponent } from './components/albums/albums.component';
+import { PhotosComponent } from './components/photos/photos.component';
 
 @NgModule({
-  declarations: [AppComponent, AppbarComponent, PostsComponent, CommentsComponent, AlbumsComponent],
+  declarations: [AppComponent, AppbarComponent, PostsComponent, CommentsComponent, AlbumsComponent, PhotosComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
