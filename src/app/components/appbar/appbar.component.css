@@ -1,7 +1,7 @@
 .link-container {
   display: flex;
   flex-direction: row;
-  border-bottom: 1px solid hsla(0, 0%, 0%, 0.782);
+  border-bottom: 2px solid hsla(0, 0%, 0%, 0.782);
 }
 
 .link {
