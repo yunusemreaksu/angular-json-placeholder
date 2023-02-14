@@ -22,4 +22,19 @@ export class CommentService {
 
     return this.http.get<Comment[]>(this.commentsUrl, options);
   }
+
+  getCommentsOfPost(postId: number): Observable<Comment[]> {
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+    });
+
+    const options = {
+      headers,
+    };
+
+    return this.http.get<Comment[]>(
+      `https://jsonplaceholder.typicode.com/posts/${postId}/comments`,
+      options
+    );
+  }
 }

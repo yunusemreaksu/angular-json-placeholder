@@ -9,6 +9,7 @@ import { TodoService } from 'src/app/services/todo.service';
 })
 export class TodosComponent {
   todos: Todo[] = [];
+  show = false
 
   constructor(private todoService: TodoService) {}
 

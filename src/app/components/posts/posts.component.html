@@ -1,6 +1,6 @@
 <div class="post-container" *ngFor="let post of posts">
   <p><span>UserID: </span>{{post.userId}}</p>
-  <p><span>ID: </span>{{post.id}}</p>
+  <p><span>ID: </span><a routerLink="/posts/{{post.id}}/comments">{{post.id}}</a></p>
   <p><span>Title: </span>{{post.title}}</p>
   <p><span>Post: </span>{{post.body}}</p>
   <hr>

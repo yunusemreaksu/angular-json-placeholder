@@ -10,9 +10,19 @@ import { CommentsComponent } from './components/comments/comments.component';
 import { AlbumsComponent } from './components/albums/albums.component';
 import { PhotosComponent } from './components/photos/photos.component';
 import { TodosComponent } from './components/todos/todos.component';
+import { UsersComponent } from './components/users/users.component';
 
 @NgModule({
-  declarations: [AppComponent, AppbarComponent, PostsComponent, CommentsComponent, AlbumsComponent, PhotosComponent, TodosComponent],
+  declarations: [
+    AppComponent,
+    AppbarComponent,
+    PostsComponent,
+    CommentsComponent,
+    AlbumsComponent,
+    PhotosComponent,
+    TodosComponent,
+    UsersComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],

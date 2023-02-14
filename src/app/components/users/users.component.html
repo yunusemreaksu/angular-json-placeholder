@@ -1,0 +1,18 @@
+<div class="user-container" *ngFor="let user of users">
+  <p><span>ID: </span>{{user.id}}</p>
+  <p><span>Name: </span>{{user.name}}</p>
+  <p><span>Username: </span>{{user.username}}</p>
+  <p><span>Email: </span>{{user.email}}</p>
+  <div>
+    <p><span>Street: </span>{{user.address.street}}</p>
+    <p><span>Suite: </span>{{user.address.suite}}</p>
+    <p><span>City: </span>{{user.address.city}}</p>
+    <p><span>Zipcode: </span>{{user.address.zipcode}}</p>
+  </div>
+  <p><span>Phone: </span>{{user.phone}}</p>
+  <p><span>Website: </span>{{user.website}}</p>
+  <div>
+    <p><span>Company Name: </span>{{user.company.name}}</p>
+  </div>
+  <hr>
+</div>

@@ -5,11 +5,22 @@ import { CommentsComponent } from './components/comments/comments.component';
 import { PhotosComponent } from './components/photos/photos.component';
 import { PostsComponent } from './components/posts/posts.component';
 import { TodosComponent } from './components/todos/todos.component';
+import { UsersComponent } from './components/users/users.component';
 
 const routes: Routes = [
   {
     path: 'posts',
     component: PostsComponent,
+    // children: [
+    //   {
+    //     path: ':postId/comments',
+    //     component: CommentsComponent,
+    //   },
+    // ],
+  },
+  {
+    path: 'posts/:postId/comments',
+    component: CommentsComponent,
   },
   {
     path: '',
@@ -31,6 +42,10 @@ const routes: Routes = [
   {
     path: 'todos',
     component: TodosComponent,
+  },
+  {
+    path: 'users',
+    component: UsersComponent,
   },
 ];
 

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Comment } from 'src/app/models/comment.model';
 import { CommentService } from 'src/app/services/comment.service';
 
@@ -10,7 +11,10 @@ import { CommentService } from 'src/app/services/comment.service';
 export class CommentsComponent {
   comments: Comment[] = [];
 
-  constructor(private commentService: CommentService) {}
+  constructor(
+    private commentService: CommentService,
+    private route: ActivatedRoute
+  ) {}
 
   getComments() {
     this.commentService
@@ -18,7 +22,19 @@ export class CommentsComponent {
       .subscribe((comments) => (this.comments = comments));
   }
 
+  getCommentsOfPost(postId: number) {
+    this.commentService
+      .getCommentsOfPost(postId)
+      .subscribe((commentsOfPost) => (this.comments = commentsOfPost));
+  }
+
   ngOnInit() {
-    this.getComments();
+    const id = this.route.snapshot.paramMap.get('postId');
+    const intId = parseInt(id!);
+    if (intId) {
+      this.getCommentsOfPost(intId);
+    } else {
+      this.getComments();
+    }
   }
 }
