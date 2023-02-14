@@ -1,6 +1,6 @@
 <div class="album-container" *ngFor="let album of albums">
   <p><span>UserID: </span>{{album.userId}}</p>
-  <p><span>ID: </span>{{album.id}}</p>
+  <p><span>ID: </span><a routerLink="/albums/{{album.id}}/photos">{{album.id}}</a></p>
   <p><span>Title: </span>{{album.title}}</p>
   <hr>
 </div>

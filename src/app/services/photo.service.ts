@@ -22,4 +22,19 @@ export class PhotoService {
 
     return this.http.get<Photo[]>(this.photosUrl, options);
   }
+
+  getPhotosOfAlbum(albumId: number): Observable<Photo[]> {
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+    });
+
+    const options = {
+      headers,
+    };
+
+    return this.http.get<Photo[]>(
+      `https://jsonplaceholder.typicode.com/albums/${albumId}/photos`,
+      options
+    );
+  }
 }
